@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS objekti</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script> 
+            var osoba = { "Ime": "Marko", "Prezime" : "Markovic", "starost" : "25", "telefon" : "123-456"}; 
+            var jsonText = JSON.stringify(osoba);
+            document.write(jsonText + "<br>");  
+            
+            var jsonParse = JSON.parse(jsonText);
+            document.write(jsonParse.Ime + " " + jsonParse.Prezime + "<br>");                           
+        </script>               
+    </body>
+</html>    

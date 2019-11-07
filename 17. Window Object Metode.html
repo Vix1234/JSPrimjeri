@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object metode</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script>  
+            var confirmWindow = confirm("Da li zelite da nastavite dalje?");
+            if(confirmWindow){
+                let promptWindow = prompt("Unesite vase ime: ", "Vida");
+                alert(promptWindow);
+            }
+            else{
+                setTimeout(function(){
+                    window.alert("Kliknuli ste Cancel dugme!");
+                }, 2000);
+            }                    
+        </script>               
+    </body>
+</html>    

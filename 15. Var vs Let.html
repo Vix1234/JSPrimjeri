@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Var vs Let</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script>
+            function varPromjenjljiva(){
+                var a = 34;
+                if(true){
+                    var a = 85;
+                    document.write(a + "<br>");
+                }
+                document.write(a + "<br>");
+            }
+
+            function letPromjenjljiva(){
+                let a = 34;
+                if(true){
+                    let a = 85;
+                    document.write(a + "<br>");
+                }
+                document.write(a + "<br>");
+            }
+
+            varPromjenjljiva();
+            document.write("<br>");
+            letPromjenjljiva();           
+        </script>               
+    </body>
+</html>    

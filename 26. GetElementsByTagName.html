@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GetElementsByTagName</title>
+        <meta charset="utf-8">                        
+    </head>   
+    <body>
+        <ul id="ul1">
+            <li>Stavka 1</li>
+            <li>Stavka 2</li>
+            <li>Stavka 3</li>
+        </ul>       
+        <script>
+            var clanoviListe = document.getElementsByTagName("li");
+            clanoviListe[0].style.color = "red";
+            
+            var lista = document.getElementById("ul1");
+            var novaStavka = document.createElement("li");
+            novaStavka.textContent = "Stavka 4";
+            lista.appendChild(novaStavka);               
+        </script>
+                       
+    </body>
+</html>    

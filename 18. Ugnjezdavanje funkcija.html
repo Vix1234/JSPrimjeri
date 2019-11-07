@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ugnjezdavanje funkcija</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script>  
+            var novaOsoba = function (ime){
+                var prezime;
+                return{
+                    postaviIme: function (novoIme){
+                        ime = novoIme;
+                    },                
+
+                    procitajIme: function () {
+                        return ime;
+                    },
+
+                    procitajPrezime: function(){
+                        return prezime;
+                    },
+
+                    postaviPrezime: function(novoPrezime){
+                        prezime = novoPrezime;
+                    }
+                }
+            };
+
+            var osoba = novaOsoba("Petar Petrovic");
+            document.write(osoba.procitajIme() + "<br>");
+            osoba.postaviIme("Marko");
+            osoba.postaviPrezime("Markovic");
+            document.write(osoba.procitajPrezime() + "<br>");                        
+        </script>               
+    </body>
+</html>    

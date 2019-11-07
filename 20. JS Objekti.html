@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS objekti</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script>  
+            var osobe = [
+                {
+                    id:1,
+                    ime: "Marko", 
+                    prezime: "Markovic",
+                    starost: 25,
+                    telefon: 123-456
+                },
+                {
+                    id:2,
+                    ime: "Petar", 
+                    prezime: "Petrovic",
+                    starost: 25,
+                    telefon: 123-456
+                }                
+            ];
+            for (var i = 0; i< osobe.length; i++){
+                document.write(osobe[i].id + " " + osobe[i].ime + "<br>");
+            } 
+            document.write("<br>");
+            
+            var osoba3 = {
+                id:3,
+                ime: "Nikola", 
+                prezime: "Nikolic",
+                starost: 25,
+                telefon: 123-456
+            }            
+            osobe[2] = osoba3;
+            for (var i = 0; i< osobe.length; i++){
+                document.write(osobe[i].id + " " + osobe[i].ime + "<br>");
+            } 
+            document.write("<br>");
+
+                     
+        </script>               
+    </body>
+</html>    

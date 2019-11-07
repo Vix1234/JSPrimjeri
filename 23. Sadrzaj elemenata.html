@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pristup elementima</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <p id="p1" onclick="promijeni()">Klikni!</p>
+        <img id="img1" src="picture.jpg">
+        <script>  
+            function promijeni(){
+                var p1 = document.getElementById("p1");
+                p1.innerHTML = "Promijenjeni sadrzaj!";
+            }
+
+            var slika = document.getElementById("img1");
+            slika.onmouseover = function(){
+                alert("Hello from JS Event!");
+            };                     
+        </script>               
+    </body>
+</html>    

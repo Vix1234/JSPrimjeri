@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Nizovi</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script>  
+            var godisnjaDoba = ["Proljece", "Ljeto", "Jesen", "Zima"];
+            
+            var prviElement = godisnjaDoba[0];
+            document.write(prviElement + "<br>");            
+            document.write("Niz ima ukupno: " + godisnjaDoba.length + " clanova. <br>");
+            document.write(typeof(godisnjaDoba));
+            document.write("<br>");
+            document.write("<br> Iteriranje kroz clanove niza <br>");
+            for (var i = 0; i< godisnjaDoba.length; i++){
+                document.write(godisnjaDoba[i] + "<br>");
+            }
+            document.write("<br> Forin petlja <br>");
+            for(var i in godisnjaDoba){
+                document.write(godisnjaDoba[i] + "<br>");
+            }
+            document.write("<br>");
+            document.write("Push Metoda <br>");
+            godisnjaDoba.push("Novo godisnje doba");
+            for(var i in godisnjaDoba){
+                document.write(godisnjaDoba[i] + "<br>");
+            }
+            document.write("<br>");
+            document.write("Pop Metoda <br>");
+            godisnjaDoba.pop();
+            for(var i in godisnjaDoba){
+                document.write(godisnjaDoba[i] + "<br>");
+            }
+
+            document.write("<br>");
+            document.write("Slice Metoda <br>");
+            godisnjaDoba.slice(1,3);
+            godisnjaDoba.forEach(
+                function (element)
+                {
+                    document.write(element + "<br>");
+                });
+        </script>               
+    </body>
+</html>    

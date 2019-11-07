@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Try catch</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script> 
+            function vratiDan(dan){
+                if( dan >= 1 && dan <= 5){
+                    return "Radni dan";
+                }
+                else if( dan == 6 || dan== 7){
+                    return "Vikend";
+                }
+                else{
+                    throw "Greska";
+                }
+
+            }
+            
+            try{
+                dan = vratiDan(8);
+            }
+            catch (e){
+                dan = 'nepoznat';
+                document.write(dan + "<br>");
+                document.write(e);
+            }
+            finally{
+                document.write("<br>")
+                document.write("Finally dio koda <br>");
+            }
+                    
+        </script>               
+    </body>
+</html>    
