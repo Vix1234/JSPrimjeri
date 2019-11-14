@@ -6,7 +6,11 @@
     </head>   
     <body>
         <script> 
-            var osoba = { "Ime": "Marko", "Prezime" : "Markovic", "starost" : "25", "telefon" : "123-456"}; 
+            var osoba = { Ime: "Marko",
+                         Prezime : "Markovic", 
+                         starost : "25",
+                         telefon : "123-456"
+                        }; 
             var jsonText = JSON.stringify(osoba);
             document.write(jsonText + "<br>");  
             

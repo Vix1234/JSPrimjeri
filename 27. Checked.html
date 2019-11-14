@@ -14,10 +14,13 @@
         </form>
            
         <script>
+            //var sviElementi=document.getElementsByName("training");
+            //document.write(sviElementi.length);
+            
             var c1 = document.getElementById("cBox1");
             var c2 = document.getElementById("cBox2");
             var c3 = document.getElementById("cBox3");
-            var labela = getElementById("span1");
+            var labela =document.getElementById("span1");
             c1.checked = true;
             c2.checked = false;
             c3.checked = true;
@@ -25,6 +28,7 @@
             function provjera(){
                 
                 labela.innerHTML = c1.id + " " + c1.checked + " " + c2.id + " " + c2.checked + " " + c3.id + " " + c3.checked; 
+                labela.style.visibility = "initial";
             }              
         </script>
                        

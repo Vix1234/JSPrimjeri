@@ -6,8 +6,8 @@
     </head>   
     <body>
         <ul id="ul1">
-            <li>Stavka 1</li>
-            <li>Stavka 2</li>
+            <li id="remove">Stavka 1</li>
+            <li id="replace">Stavka 2</li>
             <li>Stavka 3</li>
         </ul>       
         <script>
@@ -17,7 +17,13 @@
             var lista = document.getElementById("ul1");
             var novaStavka = document.createElement("li");
             novaStavka.textContent = "Stavka 4";
-            lista.appendChild(novaStavka);               
+            lista.appendChild(novaStavka);
+            
+            var novaStavka2 = document.createElement("li");
+            novaStavka2.textContent = "Stavka replaced";
+            lista.replaceChild(novaStavka2, document.getElementById("replace"));
+            
+            lista.removeChild(document.getElementById("remove"));
         </script>
                        
     </body>

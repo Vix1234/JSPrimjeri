@@ -5,21 +5,24 @@
         <meta charset="utf-8">                        
     </head>   
     <body>
-        <p id="p1"></p>        
+       
+        <button onclick="tekucaLokacija()">Lokacija</button>&nbsp;
+         <button onclick="novaLokacija()">NovaLokacija</button>
+         <button onclick="nazad()">Nazad</button>  
+          <p id="p1"></p>       
         <script>
             var pElem = document.getElementById("p1");
             function novaLokacija(){
-                window.location.assign("17. Window Object Metode.html");
+                window.location.assign("https://www.youtube.com/");
             };
             function tekucaLokacija(){
-                pElem.innerHTML = "Lokacija strane je " + window.locaion.href; 
+                pElem.innerHTML = "lokacija: " + window.location.href + "<br>" + "Korisceni jezik: " +navigator.language;
+                 
             };
             function nazad(){
                 window.history.back();
             }                         
         </script>
-         <button onclick="tekucaLokacija()">Lokacija</button>&nbsp;
-         <button onclick="novaLokacija()">NovaLokacija</button>
-         <button onclick="nazad()">Nazad</button>                 
+               
     </body>
 </html>    

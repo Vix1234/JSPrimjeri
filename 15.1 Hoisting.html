@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hoisting</title>
+        <meta charset="utf-8">            
+    </head>   
+    <body>
+        <script>
+            document.write(sum(10,20));  
+            function sum(a,b)  
+            {  
+                return a+b;  
+            } 
+            
+            document.write("<br>");
+            
+            
+            broj=4;            
+            function varPromjenjljiva(){
+                broj++;
+                document.write(broj + "<br>");
+            }
+            var broj;
+            
+            varPromjenjljiva();
+            
+            broj2=10;
+            function letPromjenjljiva(){
+                broj2++;
+                document.write(broj2 + "<br>");
+            }
+            let broj2;
+            
+            letPromjenjljiva();
+        </script>               
+    </body>
+</html>    

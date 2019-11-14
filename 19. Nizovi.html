@@ -6,8 +6,10 @@
     </head>   
     <body>
         <script>  
+            /*var godisnjaDoba = new Array();
+            godisnjaDoba[0]="Proljece";*/
             var godisnjaDoba = ["Proljece", "Ljeto", "Jesen", "Zima"];
-            
+
             var prviElement = godisnjaDoba[0];
             document.write(prviElement + "<br>");            
             document.write("Niz ima ukupno: " + godisnjaDoba.length + " clanova. <br>");
@@ -24,6 +26,7 @@
             document.write("<br>");
             document.write("Push Metoda <br>");
             godisnjaDoba.push("Novo godisnje doba");
+            //godisnjaDoba[-1]="Novo godisnje doba";
             for(var i in godisnjaDoba){
                 document.write(godisnjaDoba[i] + "<br>");
             }
@@ -36,12 +39,12 @@
 
             document.write("<br>");
             document.write("Slice Metoda <br>");
-            godisnjaDoba.slice(1,3);
-            godisnjaDoba.forEach(
-                function (element)
-                {
-                    document.write(element + "<br>");
-                });
+            var noviNiz=godisnjaDoba.slice(1,3);
+            noviNiz.forEach(function(element) {  
+                document.write(element + "<br>");  
+            });
+            
+            document.write("Index elementa Jesen: " + godisnjaDoba.indexOf("Jesen") + "<br>");
         </script>               
     </body>
 </html>    
