@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Propagacija eventa</title>
+        <meta charset="utf-8"> 
+        <style>
+            body *{
+                padding: 50px;
+                background-color: rgba(0, 0, 255, 0.5);
+                border: 1px solid blue;             
+            }
+        </style>
+    </head>   
+    <body>
+        <form onclick="funkcijaElement1()">FORM
+            <div onclick="funkcijaElement2(event)">DIV
+                <p onclick="funkcijaElement3(event)">P</p>
+            </div>
+        </form>
+        Zaustavi propagaciju:
+            <input type="checkbox" id="check">  
+        <script> 
+            
+            function funkcijaElement3(event){
+                alert("P");
+                  if (document.getElementById("check").checked) {
+                    event.stopPropagation();
+                  }
+            }
+            
+            function funkcijaElement2(){
+                alert("DIV");
+                 if (document.getElementById("check").checked) {
+                    event.stopPropagation();
+                  }
+            }
+            
+            function funkcijaElement1(){
+                alert("Form");
+            }                  
+        </script>               
+    </body>
+</html>    

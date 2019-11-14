@@ -5,13 +5,13 @@
         <meta charset="utf-8">                        
     </head>   
     <body>
-        <form>
-                <input id="cBox1" type="checkbox" name="training"> Elementary<br/>
-                <input id="cBox2" type="checkbox" name="training"> Advanced<br/>
-                <input id="cBox3" type="checkbox" name="training"> Proficiency<br/><hr>
-                <button id="btn1" type="submit" onclick="provjera()">Submit</button>
-                <span id="span1"></span>
-        </form>
+      
+        <input id="cBox1" type="checkbox" name="training"> Elementary<br/>
+        <input id="cBox2" type="checkbox" name="training"> Advanced<br/>
+        <input id="cBox3" type="checkbox" name="training"> Proficiency<br/><hr>
+        <button id="btn1" type="submit" onclick="provjera()">Submit</button>
+        <span id="span1"></span>
+
            
         <script>
             //var sviElementi=document.getElementsByName("training");
@@ -26,10 +26,8 @@
             c3.checked = true;
 
             function provjera(){
-                
-                labela.innerHTML = c1.id + " " + c1.checked + " " + c2.id + " " + c2.checked + " " + c3.id + " " + c3.checked; 
-                labela.style.visibility = "initial";
-            }              
+                labela.innerHTML ="<br>"+c1.id + " " + c1.checked + " " + c2.id + " " + c2.checked + " " + c3.id + " " + c3.checked; 
+            }
         </script>
                        
     </body>

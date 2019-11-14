@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event listeneri</title>
+        <meta charset="utf-8"> 
+    </head>   
+    <body>
+        <div id="divEvent" style="padding: 50px;"></div>  
+        <button onclick="removeHandler()">Ukloni Event Listener</button>
+      <script>
+        document.addEventListener("mousemove", nekaFunkcija);
+
+        function nekaFunkcija() {
+          document.getElementById("divEvent").style.backgroundColor = getRandomColor();
+        }
+          
+        function getRandomColor() {
+          let letters = '0123456789ABCDEF';
+          let color = '#';
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }  
+
+        function removeHandler() {
+          document.removeEventListener("mousemove", nekaFunkcija);
+        }
+          
+          
+    </script>            
+    </body>
+</html>    
