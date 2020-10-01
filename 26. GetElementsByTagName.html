@@ -2,28 +2,46 @@
 <html>
     <head>
         <title>GetElementsByTagName</title>
-        <meta charset="utf-8">                        
+        <meta charset="utf-8">
+        <style>
+            .elementSaKlasom{
+                background-color: aqua;
+            }
+        </style>                        
     </head>   
-    <body>
+    <body class="elementSaKlasom">
         <ul id="ul1">
-            <li id="remove">Stavka 1</li>
+            <li id="remove" name="prviClanListe">Stavka 1</li>
             <li id="replace">Stavka 2</li>
             <li>Stavka 3</li>
         </ul>       
         <script>
             var clanoviListe = document.getElementsByTagName("li");
             clanoviListe[0].style.color = "red";
-            
+
+            var prviClanListe = document.getElementsByName('prviClanListe');
+            console.log(prviClanListe[0].innerHTML);
+
+            var elementSaKlasom = document.getElementsByClassName('elementSaKlasom');
+            console.log(elementSaKlasom[0].innerHTML);
+             
             var lista = document.getElementById("ul1");
+
+            lista.before('Tekst prije liste');
+            lista.after('Tekst posle liste');
+
             var novaStavka = document.createElement("li");
             novaStavka.textContent = "Stavka 4";
-            lista.appendChild(novaStavka);
+            //lista.appendChild(novaStavka);
+            lista.append(novaStavka);
             
             var novaStavka2 = document.createElement("li");
             novaStavka2.textContent = "Stavka replaced";
-            lista.replaceChild(novaStavka2, document.getElementById("replace"));
+            //lista.replaceChild(novaStavka2, document.getElementById("replace"));
+            lista.replaceWith(novaStavka2, document.getElementById("replace"));
             
-            lista.removeChild(document.getElementById("remove"));
+            //lista.removeChild(document.getElementById("remove"));
+            lista.remove(document.getElementById("remove"));
         </script>
                        
     </body>

@@ -14,18 +14,17 @@
                     return "Vikend";
                 }
                 else{
-                    throw "Greska";
+                    throw new Error("Greska");
                 }
-
             }
             
             try{
-                dan = vratiDan(8);
+                let dan = vratiDan(8);
             }
-            catch (e){
-                dan = 'nepoznat';
-                document.write(dan + "<br>");
-                document.write(e);
+            catch (err){
+                document.write(err.name + "<br>");
+                document.write(err.message + "<br>");
+                document.write(err.stack + "<br>");
             }
             finally{
                 document.write("<br>")

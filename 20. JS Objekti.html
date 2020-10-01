@@ -5,21 +5,24 @@
         <meta charset="utf-8">            
     </head>   
     <body>
-        <script>  
+        <script> 
+            let mojPrviObjekat = new Object();
+            let drugiObjekat = {};
+            
             var osobe = [
                 {
                     id:1,
                     ime: "Marko", 
                     prezime: "Markovic",
                     starost: 25,
-                    telefon: 123-456
+                    telefon: 123-456,
                 },
                 {
                     id:2,
                     ime: "Petar", 
                     prezime: "Petrovic",
                     starost: 25,
-                    telefon: 123-456
+                    telefon: 123-456,
                 }                
             ];
             for (var i = 0; i< osobe.length; i++){
@@ -31,12 +34,20 @@
                 id:3,
                 ime: "Nikola", 
                 prezime: "Nikolic",
-                starost: 25,
-                telefon: 123-456
-            }            
+                "starost osobe": 25,
+                telefon: 123-456,
+                return: 4,
+                let: "Ovo je dozvoljeno",
+
+            }
+            osoba3["starost osobe"] = 30;
+            osoba3.ime = "Aleksandar";
+            document.write("Osoba3 se zove " + osoba3.ime + " i ima " + osoba3["starost osobe"]+ " godina <br>");
+            document.write("Pristupanje nepostojecem propertiju: " + drugiObjekat.imeKorisnika + "<br>");
+
             osobe[2] = osoba3;
-            for (var i = 0; i< osobe.length; i++){
-                document.write(osobe[i].id + " " + osobe[i].ime + "<br>");
+            for (let key in osoba3){
+                document.write(osoba3[key] + "<br>");
             } 
             document.write("<br>");                     
         </script>               

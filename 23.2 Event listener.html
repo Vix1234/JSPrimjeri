@@ -8,7 +8,7 @@
         <div id="divEvent" style="padding: 50px;"></div>  
         <button onclick="removeHandler()">Ukloni Event Listener</button>
       <script>
-        document.addEventListener("mousemove", nekaFunkcija);
+        document.addEventListener("mousemove", nekaFunkcija, false);
 
         function nekaFunkcija() {
           document.getElementById("divEvent").style.backgroundColor = getRandomColor();

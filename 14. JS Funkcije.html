@@ -6,10 +6,55 @@
     </head>   
     <body>
         <script>
+            //Uobicajeni izgled funkcije
             function proizvod(a,b){
                 return a*b;
             }
-            document.write("Rezultat: " + proizvod(2,3) + "<br>");     
+            document.write("Rezultat: " + proizvod(2,3) + "<br>");
+
+            //Shadowing promjenjljivih
+            var name = "Ana";
+            function SetName(name){
+                var name = "Bojana";
+                return name
+            }
+            document.writeln(SetName(name) + '<br>');
+
+            //Parametri u JS funkcijama
+            function SetParameters(param1, param2, param3 = 5, param4 = SetDefualtValue()){
+                return param1 + param2 + param3 + param4;
+            }
+            function SetDefualtValue(){
+                return 5;
+            }
+            document.writeln(SetParameters(1,2,3,4,5) + '<br>');
+            document.writeln(SetParameters(1,2,3) + '<br>');
+            document.writeln(SetParameters() + '<br>');
+           
+            //funkcija kao promjenjljiva            
+            const izracunajKvadrat = function(broj){
+                return broj*broj;
+            };
+            document.writeln(izracunajKvadrat(10) + '<br>');
+
+            //Function Expression vs Function Declaration
+            sumaBrojeva(2,3);
+            function sumaBrojeva(br1, br2){
+                return br1 + br2;
+            }
+
+            /*proizvodBrojeva();
+            let proizvodBrojeva = function(br1, br2){
+                return br1 * br2;
+            }*/
+
+            //Arrow funkcije
+            let zbir = (a, b) => {
+                return a + b;
+            }
+            document.writeln(zbir(2,3) + '<br>');  
+
+        
         </script>               
     </body>
 </html>    

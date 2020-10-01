@@ -7,7 +7,15 @@
     <body>
         <p id="p1" onclick="promijeni()">Klikni!</p>
         <img id="img1" src="picture.jpg">
-        <script>  
+        <script>
+            let paragraf = document.querySelectorAll('#p1');
+            alert(paragraf[0].innerHTML);
+
+            let nodSlike = document.body.querySelector('#img1');
+            if(nodSlike !== null){
+                alert("Pronasao sam sliku u HTML-u!")
+            }   
+            
             function promijeni(){
                 var p1 = document.getElementById("p1");
                 p1.innerHTML = "Promijenjeni sadrzaj!";
@@ -16,7 +24,9 @@
             var slika = document.getElementById("img1");
             slika.onmouseover = function(){
                 alert("Hello from JS Event!");
-            };                     
+            };
+
+                             
         </script>               
     </body>
 </html>    

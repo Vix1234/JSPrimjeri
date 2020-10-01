@@ -6,7 +6,7 @@
     </head>   
     <body>
         <script>  
-            /*var godisnjaDoba = new Array();
+            /*var godisnjaDoba = new Array(4);
             godisnjaDoba[0]="Proljece";*/
             var godisnjaDoba = ["Proljece", "Ljeto", "Jesen", "Zima"];
 
@@ -27,15 +27,32 @@
             document.write("Push Metoda <br>");
             godisnjaDoba.push("Novo godisnje doba");
             //godisnjaDoba[-1]="Novo godisnje doba";
-            for(var i in godisnjaDoba){
-                document.write(godisnjaDoba[i] + "<br>");
+            for(var doba of godisnjaDoba){
+                document.write(doba + "<br>");
             }
             document.write("<br>");
             document.write("Pop Metoda <br>");
             godisnjaDoba.pop();
-            for(var i in godisnjaDoba){
-                document.write(godisnjaDoba[i] + "<br>");
+            for(var doba of godisnjaDoba){
+                document.write(doba + "<br>");
             }
+
+            let voce = ["Jabuka", "Kruska", "Sljiva"];
+
+            document.write("<br>");            
+            document.write("Shift Metoda <br>");
+            voce.shift();
+            for(var i of voce){
+                document.write(voce[i] + "<br>");
+            }
+
+            document.write("<br>");
+            document.write("Unshift Metoda <br>");
+            voce.unshift("Banana");
+            for(var vocka of voce){
+                document.write(vocka + "<br>");
+            }
+
 
             document.write("<br>");
             document.write("Slice Metoda <br>");
